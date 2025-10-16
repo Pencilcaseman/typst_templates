@@ -1,6 +1,7 @@
 // Packages
 #import "@preview/cetz:0.4.2" as cetz
 #import "@preview/lilaq:0.5.0" as lq
+#import "@preview/showybox:2.0.4" as showybox
 #import "@preview/codly:1.3.0": *
 #import "@preview/codly-languages:0.1.8": *
 
@@ -236,7 +237,7 @@
 
   set par(
     justify: true,
-    first-line-indent: (amount: 1em, all: true),
+    first-line-indent: (amount: 1em, all: false),
     spacing: 0.5em,
     leading: 0.5em,
   )
@@ -248,4 +249,32 @@
 
   // Display bibliography.
   bibliography
+}
+
+#let definition(title: [Definition], footer: "", body) = {
+  h(5mm)
+
+  showybox.showybox(
+    title-style: (
+      boxed-style: (
+        anchor: (
+          x: left,
+          y: horizon,
+        ),
+        radius: (rest: 1mm),
+      ),
+    ),
+    frame: (
+      title-color: green.darken(50%),
+      body-color: green.lighten(90%),
+      footer-color: green.lighten(75%),
+      border-color: green.darken(50%),
+      radius: (rest: 1mm),
+    ),
+    title: title,
+    footer: text(
+      emph(footer),
+    ),
+    body,
+  )
 }

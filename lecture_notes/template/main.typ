@@ -112,6 +112,24 @@ efficient, and easy-to-use alternative to existing systems. Our goal is to shake
 up the status quo and offer researchers a better way to approach scientific
 writing.
 
+#definition(
+  title: "Pythagoras' Theorem",
+  block(
+    [For every right triangle, the sum of the squares of the legs of the triangle
+      is equal to the square of the hypotenuse.
+
+      For legs $a$ and $b$ and hypotenuse $c$:
+
+      #math.equation(numbering: none, block: true)[
+        $
+          a^2 + b^2 = c^2
+        $
+      ]
+    ],
+  ),
+  footer: "Footer text",
+)
+
 #cetz.canvas(length: 2cm, {
   import cetz.draw: *
   let phi = (1 + calc.sqrt(5)) / 2
