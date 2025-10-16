@@ -309,3 +309,13 @@ Is this indented??
 ===== Another deep subsection heading
 
 Oh all good. It seems like we've stopped here.
+
+$y = a x + b$
+
+$
+  a^2 + b^2 = c^2
+$
+
+#eq_no_num[$
+  a^2 + b^2 = c^2
+$]
