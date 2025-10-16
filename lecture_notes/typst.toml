@@ -1,0 +1,17 @@
+[package]
+name = "lecture_notes"
+version = "0.1.0"
+compiler = "0.13.1"
+entrypoint = "lib.typ"
+repository = "https://github.com/Pencilcaseman/typst_lecture_notes_tempalte"
+authors = ["Toby Davis"]
+license = "MIT"
+description = "A smart and easy-to-use template for creating lecture notes"
+keywords = ["Computer Science", "Computer Engineering", "Software", "Lecture", "Notes"]
+categories = ["paper"]
+disciplines = ["computer-science", "engineering"]
+
+[template]
+path = "template"
+entrypoint = "main.typ"
+# thumbnail = "thumbnail.png"
