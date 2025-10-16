@@ -272,9 +272,11 @@
       radius: (rest: 1mm),
     ),
     title: title,
-    footer: text(
-      emph(footer),
-    ),
+    footer: if footer == "" { "" } else {
+      text(
+        emph(footer),
+      )
+    },
     body,
   )
 }

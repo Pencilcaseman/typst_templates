@@ -127,7 +127,7 @@ writing.
       ]
     ],
   ),
-  footer: "Footer text",
+  // footer: "Footer text",
 )
 
 #cetz.canvas(length: 2cm, {
