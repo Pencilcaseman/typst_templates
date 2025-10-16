@@ -267,3 +267,27 @@ presented in @sec:methods.
 #lorem(240)
 
 #lorem(240)
+
+= This is a section
+
+Some stuff.
+
+== This is a subsection
+
+Some more stuff
+
+=== This is a sub-subsection
+
+Even more stuff
+
+==== A ludicrously deep subsection heading
+
+What does this even mean?
+
+===== A ludicrously deep subsection heading
+
+Woah... We're going even deeper
+
+===== Another deep subsection heading
+
+Oh all good. It seems like we've stopped here.

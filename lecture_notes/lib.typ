@@ -148,9 +148,10 @@
       set align(center)
       set text(size: 12pt)
       show: block.with(spacing: 12pt, sticky: true)
+      show: smallcaps
 
       if it.numbering != none {
-        numbering("I.", last_level)
+        numbering("1.", last_level)
         h(7pt, weak: true)
       }
 
@@ -158,7 +159,17 @@
     } else if it.level == 3 {
       set align(center)
       set text(size: 11pt)
-      numbering("I.", last_level)
+      show: smallcaps
+      numbering("A.", last_level)
+      h(7pt, weak: true)
+
+      it.body
+    } else {
+      set align(left)
+      set text(size: 10pt)
+      v(3pt)
+      numbering("I.I.I.I.I.I.I", ..level.slice(3))
+      show: smallcaps
       h(7pt, weak: true)
 
       it.body
