@@ -168,7 +168,7 @@
       set align(left)
       set text(size: 10pt)
       v(3pt)
-      numbering("I.I.I.I.I.I.I", ..level.slice(3))
+      numbering("I.I.I.I.I.I.I)", ..level.slice(3))
       show: smallcaps
       h(7pt, weak: true)
 
