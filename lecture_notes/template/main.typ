@@ -319,3 +319,46 @@ $
 #eq_no_num[$
   a^2 + b^2 = c^2
 $]
+
+#import "@preview/game-theoryst:0.1.0": *
+
+#figure(
+  scope: "column",
+  placement: none,
+
+  table(
+    align: center,
+    columns: 2,
+    stroke: none,
+    nfg(
+      players: ($P_1$, $P_2$),
+      s1: ("X", "Y"),
+      s2: ("X", "Y"),
+      [$(3, 3)$],
+      [$(1, 5)$],
+      [$(5, 1)$],
+      [$(0, 0)$],
+    ),
+    nfg(
+      players: ($P_1$, $P_2$),
+      s1: ($alpha$, $beta$),
+      s2: ($alpha$, $beta$),
+      [$(2, 1)$],
+      [$(0, 5)$],
+      [$(3, -2)$],
+      [$(1, -1)$],
+    ),
+  ),
+  caption: [
+    #par([
+      Left: Not the same as the Prisoner's Dilemma, as there is not always a
+      benefit to switching to Y.
+    ])
+
+    #par([
+      Right: Though it has different values, the players always deviate to
+      playing $beta$.
+    ])
+  ],
+)
+
