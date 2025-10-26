@@ -23,7 +23,8 @@
 
   // Font config
   // set text(font: "STIX Two Text", size: 10pt, spacing: .35em)
-  set text(font: "New Computer Modern", size: 10pt, spacing: .35em)
+  // set text(font: "New Computer Modern", size: 10pt, spacing: .35em)
+  set text(size: 10pt, spacing: .35em)
 
   // Enumeration numbering
   set enum(numbering: "1. a. i.")
