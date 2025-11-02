@@ -7,9 +7,10 @@
   author: "Someone Clever",
   university: "University of Cleverness",
 
+  show-outline: true,
   bibliography: bibliography("refs.bib"),
   figure-supplement: [Fig.],
-  for-print: false,
+  for-print: true,
 )
 
 = Introduction

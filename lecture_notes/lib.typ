@@ -12,6 +12,7 @@
   author: none,
   university: none,
   paper-size: "a4",
+  show-outline: true,
   bibliography: none,
   figure-supplement: [Fig.],
   for-print: false,
@@ -245,7 +246,7 @@
 
   pagebreak(to: if for-print { "odd" } else { none })
 
-  {
+  if show-outline {
     set page(
       columns: 1,
     )
@@ -262,10 +263,11 @@
       v(gap)
       it
     }
-    outline(indent: 2em)
-  }
 
-  pagebreak(to: if for-print { "odd" } else { none })
+    outline(indent: 2em)
+
+    pagebreak(to: if for-print { "odd" } else { none })
+  }
 
   // Display the paper's contents.
   body
