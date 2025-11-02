@@ -77,6 +77,7 @@
   // Configure the page and multi-column properties.
   set columns(gutter: 12pt)
   set page(
+    numbering: none,
     columns: 2,
     paper: paper-size,
     // The margins depend on the paper size.
@@ -268,6 +269,23 @@
 
     pagebreak(to: if for-print { "odd" } else { none })
   }
+
+  counter(page).update(1)
+  set page(
+    numbering: "1",
+    header: context {
+      set text(style: "italic")
+      [ #course \~ #module ]
+
+      h(1fr)
+
+      set text(style: "normal")
+      counter(page).display(
+        "1 of 1",
+        both: true,
+      )
+    },
+  )
 
   // Display the paper's contents.
   body

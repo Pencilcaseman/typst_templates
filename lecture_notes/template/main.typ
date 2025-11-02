@@ -10,7 +10,7 @@
   show-outline: true,
   bibliography: bibliography("refs.bib"),
   figure-supplement: [Fig.],
-  for-print: true,
+  for-print: false,
 )
 
 = Introduction
