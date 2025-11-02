@@ -357,3 +357,33 @@
     body,
   )
 }
+
+#let proof(title: [Proof], footer: "", body) = {
+  h(5mm)
+
+  showybox.showybox(
+    title-style: (
+      boxed-style: (
+        anchor: (
+          x: left,
+          y: horizon,
+        ),
+        radius: (rest: 1mm),
+      ),
+    ),
+    frame: (
+      title-color: red.darken(50%),
+      body-color: red.lighten(90%),
+      footer-color: red.lighten(75%),
+      border-color: red.darken(50%),
+      radius: (rest: 1mm),
+    ),
+    title: title,
+    footer: if footer == "" { "" } else {
+      text(
+        emph(footer),
+      )
+    },
+    body,
+  )
+}

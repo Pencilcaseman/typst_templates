@@ -149,6 +149,15 @@ writing.
   footer: "Footer text",
 )
 
+#proof(
+  block(
+    [
+      This is a proof.
+    ],
+  ),
+  footer: "Footer text",
+)
+
 #cetz.canvas(length: 2cm, {
   import cetz.draw: *
   let phi = (1 + calc.sqrt(5)) / 2
