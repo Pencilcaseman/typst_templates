@@ -245,6 +245,28 @@
 
   pagebreak(to: if for-print { "odd" } else { none })
 
+  {
+    set page(
+      columns: 1,
+    )
+
+    show text: text.with(size: 1.15em)
+
+    show outline.entry: it => {
+      let gap = if it.level < 3 {
+        (2em, 1.5em, 1em).at(it.level)
+      } else {
+        0.5em
+      }
+
+      v(gap)
+      it
+    }
+    outline(indent: 2em)
+  }
+
+  pagebreak(to: if for-print { "odd" } else { none })
+
   // Display the paper's contents.
   body
 
