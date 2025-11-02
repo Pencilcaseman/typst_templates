@@ -327,3 +327,33 @@
     body,
   )
 }
+
+#let theorem(title: [Theorem], footer: "", body) = {
+  h(5mm)
+
+  showybox.showybox(
+    title-style: (
+      boxed-style: (
+        anchor: (
+          x: left,
+          y: horizon,
+        ),
+        radius: (rest: 1mm),
+      ),
+    ),
+    frame: (
+      title-color: purple.darken(50%),
+      body-color: purple.lighten(90%),
+      footer-color: purple.lighten(75%),
+      border-color: purple.darken(50%),
+      radius: (rest: 1mm),
+    ),
+    title: title,
+    footer: if footer == "" { "" } else {
+      text(
+        emph(footer),
+      )
+    },
+    body,
+  )
+}

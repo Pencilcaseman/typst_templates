@@ -131,6 +131,24 @@ writing.
   // footer: "Footer text",
 )
 
+#theorem(
+  block(
+    [
+      For every right triangle, the sum of the squares of the legs of the
+      triangle is equal to the square of the hypotenuse.
+
+      For legs $a$ and $b$ and hypotenuse $c$:
+
+      #math.equation(numbering: none, block: true)[
+        $
+          a^2 + b^2 = c^2
+        $
+      ]
+    ],
+  ),
+  footer: "Footer text",
+)
+
 #cetz.canvas(length: 2cm, {
   import cetz.draw: *
   let phi = (1 + calc.sqrt(5)) / 2
