@@ -78,11 +78,12 @@
   set columns(gutter: 12pt)
   set page(
     numbering: none,
+    footer: none,
     columns: 2,
     paper: paper-size,
     // The margins depend on the paper size.
     margin: if paper-size == "a4" {
-      (x: 41.5pt, top: 80.51pt, bottom: 89.51pt)
+      (x: 1.25cm, top: 2.5cm, bottom: 1.5cm)
     } else {
       (
         x: (50pt / 216mm) * 100%,
@@ -284,6 +285,10 @@
         "1 of 1",
         both: true,
       )
+
+      v(0.25em)
+
+      line(length: 100%, stroke: stroke(thickness: 0.5pt))
     },
   )
 
