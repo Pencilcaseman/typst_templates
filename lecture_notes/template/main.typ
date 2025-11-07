@@ -158,6 +158,13 @@ writing.
   footer: "Footer text",
 )
 
+#note(
+  title: [A note],
+  [
+    Hello, world!
+  ],
+)
+
 #cetz.canvas(length: 2cm, {
   import cetz.draw: *
   let phi = (1 + calc.sqrt(5)) / 2

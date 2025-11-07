@@ -303,92 +303,65 @@
   math.equation(block: true, numbering: none, body)
 }
 
-#let definition(title: [Definition], footer: "", body) = {
+#let colored_titlebox(title: [Definition], footer: "", color: color, body) = {
   h(5mm)
 
-  showybox.showybox(
-    title-style: (
-      boxed-style: (
-        anchor: (
-          x: left,
-          y: horizon,
-        ),
+  if title == none {
+    showybox.showybox(
+      frame: (
+        body-color: color.lighten(90%),
+        footer-color: color.lighten(75%),
+        border-color: color.darken(50%),
         radius: (rest: 1mm),
       ),
-    ),
-    frame: (
-      title-color: green.darken(50%),
-      body-color: green.lighten(90%),
-      footer-color: green.lighten(75%),
-      border-color: green.darken(50%),
-      radius: (rest: 1mm),
-    ),
-    title: title,
-    footer: if footer == "" { "" } else {
-      text(
-        emph(footer),
-      )
-    },
-    body,
-  )
+      footer: if footer == "" { "" } else {
+        text(
+          emph(footer),
+        )
+      },
+      body,
+    )
+  } else {
+    showybox.showybox(
+      title-style: (
+        boxed-style: (
+          anchor: (
+            x: left,
+            y: horizon,
+          ),
+          radius: (rest: 1mm),
+        ),
+      ),
+      frame: (
+        title-color: color.darken(50%),
+        body-color: color.lighten(90%),
+        footer-color: color.lighten(75%),
+        border-color: color.darken(50%),
+        radius: (rest: 1mm),
+      ),
+      title: title,
+      footer: if footer == "" { "" } else {
+        text(
+          emph(footer),
+        )
+      },
+      body,
+    )
+  }
+}
+
+#let definition(title: [Definition], footer: "", body) = {
+  colored_titlebox(title: title, footer: footer, color: color.green, body)
 }
 
 #let theorem(title: [Theorem], footer: "", body) = {
-  h(5mm)
-
-  showybox.showybox(
-    title-style: (
-      boxed-style: (
-        anchor: (
-          x: left,
-          y: horizon,
-        ),
-        radius: (rest: 1mm),
-      ),
-    ),
-    frame: (
-      title-color: purple.darken(50%),
-      body-color: purple.lighten(90%),
-      footer-color: purple.lighten(75%),
-      border-color: purple.darken(50%),
-      radius: (rest: 1mm),
-    ),
-    title: title,
-    footer: if footer == "" { "" } else {
-      text(
-        emph(footer),
-      )
-    },
-    body,
-  )
+  colored_titlebox(title: title, footer: footer, color: color.purple, body)
 }
 
 #let proof(title: [Proof], footer: "", body) = {
-  h(5mm)
+  colored_titlebox(title: title, footer: footer, color: color.blue, body)
+}
 
-  showybox.showybox(
-    title-style: (
-      boxed-style: (
-        anchor: (
-          x: left,
-          y: horizon,
-        ),
-        radius: (rest: 1mm),
-      ),
-    ),
-    frame: (
-      title-color: blue.darken(50%),
-      body-color: blue.lighten(90%),
-      footer-color: blue.lighten(75%),
-      border-color: blue.darken(50%),
-      radius: (rest: 1mm),
-    ),
-    title: title,
-    footer: if footer == "" { "" } else {
-      text(
-        emph(footer),
-      )
-    },
-    body,
-  )
+#let note(title: [Note], footer: "", body) = {
+  colored_titlebox(title: title, footer: footer, color: color.eastern, body)
 }
