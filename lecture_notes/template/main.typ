@@ -224,6 +224,24 @@ By leveraging advanced algorithms and a user-friendly interface, Typst offers
 several advantages over existing typesetting systems, including faster document
 creation, simplified syntax, and increased ease-of-use.
 
+#box(
+  height: 8em,
+  align(
+    center + horizon,
+    $
+      markul(p_i, tag: #<p>) = markrect(
+        exp(- mark(beta, tag: #<beta>, color: #red) mark(E_i, tag: #<E>, color: #green)),
+        tag: #<Boltzmann>, color: #blue,
+      ) / markhl(sum_j exp(- beta E_j), tag: #<Z>)
+      #annot(<p>, pos: bottom + left)[Probability of \ state $i$]
+      #annot(<beta>, pos: top + left, dy: -1.5em, leader-connect: "elbow")[Inverse temperature]
+      #annot(<E>, pos: top + right, dy: -1em)[Energy]
+      #annot(<Boltzmann>, pos: top + left)[Boltzmann factor]
+      #annot(<Z>)[Partition function]
+    $,
+  ),
+)
+
 To demonstrate the potential of Typst, we conducted a series of experiments
 comparing it to other popular typesetting systems, including LaTeX. Our findings
 suggest that Typst offers several benefits for scientific writing, particularly
