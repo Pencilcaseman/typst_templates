@@ -258,7 +258,7 @@
 
     show outline.entry: it => {
       let gap = if it.level < 3 {
-        (2em, 1.5em, 1em).at(it.level)
+        (1em, 0.5em, 0.25em).at(it.level)
       } else {
         0.5em
       }
