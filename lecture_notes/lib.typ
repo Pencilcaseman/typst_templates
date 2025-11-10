@@ -127,7 +127,7 @@
 
       set align(center)
       set text(if exclude { 10pt } else { 14pt })
-      show: block.with(above: 15pt, below: 13.75pt, sticky: true)
+      show: block.with(above: 20pt, below: 15pt, sticky: true)
       show: smallcaps
 
       if it.numbering != none and not exclude {
@@ -140,7 +140,7 @@
       // Second-level headings are run-ins.
       set align(center)
       set text(size: 12pt)
-      show: block.with(spacing: 12pt, sticky: true)
+      show: block.with(spacing: 15pt, sticky: true)
       show: smallcaps
 
       if it.numbering != none {
@@ -153,6 +153,7 @@
       set align(center)
       set text(size: 11pt)
       show: smallcaps
+      show: block.with(spacing: 10pt, sticky: true)
       numbering("A.", last_level)
       h(7pt, weak: true)
 
