@@ -28,25 +28,27 @@ frustration and despair for many researchers @netwok2020 @netwok2022.
 
   v(5mm)
 
-  figure(
-    placement: top,
-    scope: "parent",
-    lq.diagram(
-      title: [Precious data],
-      xlabel: $x$,
-      ylabel: $y$,
-      width: 100%,
+  [
+    #figure(
+      placement: top,
+      scope: "parent",
+      lq.diagram(
+        title: [Precious data],
+        xlabel: $x$,
+        ylabel: $y$,
+        width: 100%,
 
-      lq.plot(xs, (3, 5, 4, 2, 3), mark: "s", label: [A]),
-      lq.plot(
-        xs,
-        x => 2 * calc.cos(x) + 3,
-        mark: "o",
-        label: [B],
+        lq.plot(xs, (3, 5, 4, 2, 3), mark: "s", label: [A]),
+        lq.plot(
+          xs,
+          x => 2 * calc.cos(x) + 3,
+          mark: "o",
+          label: [B],
+        ),
       ),
-    ),
-    caption: [A caption for this figure],
-  )
+      caption: [A caption for this figure],
+    )<lovely_graph>
+  ]
 
   align(center, lq.diagram(
     title: [Precious data],
@@ -248,6 +250,9 @@ suggest that Typst offers several benefits for scientific writing, particularly
 for novice users who may struggle with the complexities of LaTeX. Additionally,
 we demonstrate that Typst offers advanced features for experienced users,
 allowing for greater customization and flexibility in document creation.
+
+This links to @lovely_graph
+This links to #link(<lovely_graph>, [the same graph])
 
 Overall, we believe that Typst represents a significant step forward in the
 field of scientific writing and typesetting, providing researchers with a

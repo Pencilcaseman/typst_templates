@@ -171,6 +171,12 @@
     }
   }
 
+  // Style links
+  show link: it => {
+    set text(fill: blue.darken(30%), style: "italic")
+    it
+  }
+
   // Style bibliography.
   show std.bibliography: set text(8pt)
   show std.bibliography: set block(spacing: 0.5em)
