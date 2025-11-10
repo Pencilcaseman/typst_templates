@@ -261,6 +261,10 @@ their research. In the following sections, we will introduce Typst in more
 detail and provide evidence for its superiority over other typesetting systems
 in a variety of scenarios.
 
+#no_indent[
+  This paragraph is not indented
+]
+
 #codly(highlights: (
   (line: 4, start: 3, end: none, fill: red),
   (line: 5, start: 12, end: 21, fill: green, tag: "(a)"),

@@ -311,6 +311,15 @@
   math.equation(block: true, numbering: none, body)
 }
 
+#let no_indent(body) = context {
+  let prev_indent = par.first-line-indent
+  set par(first-line-indent: 0em)
+
+  body
+
+  set par(first-line-indent: prev_indent)
+}
+
 #let colored_titlebox(title: [Definition], footer: "", color: color, body) = {
   h(5mm)
 
