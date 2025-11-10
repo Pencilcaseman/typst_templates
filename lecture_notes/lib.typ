@@ -97,6 +97,7 @@
   // Configure equation numbering and spacing.
   set math.equation(numbering: "(1)")
   show math.equation: set block(spacing: 0.65em)
+  set math.mat(delim: "[")
 
   // Configure lists.
   set enum(indent: 10pt, body-indent: 9pt)
