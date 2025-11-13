@@ -1,10 +1,14 @@
 list:
     just --list
 
-lecture-notes:
+build template:
     typst compile \
-        ./lecture_notes/template/main.typ \
-        --root ./lecture_notes \
+        ./{{ template }}/template/main.typ \
+        --root ./{{ template }} \
         --pdf-standard 2.0
 
-all: lecture-notes
+lecture-notes: (build "lecture_notes")
+
+simple-report: (build "simple_report")
+
+all: lecture-notes simple-report
