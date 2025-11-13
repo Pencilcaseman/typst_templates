@@ -190,6 +190,8 @@
         length: 100%,
         stroke: stroke(thickness: 0.4mm),
       )
+
+      v(0.5cm)
     },
   )
 
@@ -199,27 +201,6 @@
     spacing: 0.75em,
     leading: 0.5em,
   )
-
-  // counter(page).update(1)
-  // set page(
-  //   numbering: "1",
-  //   header: context {
-  //     set text(style: "italic")
-  //     [ #course \~ #module ]
-  //
-  //     h(1fr)
-  //
-  //     set text(style: "normal")
-  //     counter(page).display(
-  //       "1 of 1",
-  //       both: true,
-  //     )
-  //
-  //     v(0.25em)
-  //
-  //     line(length: 100%, stroke: stroke(thickness: 0.5pt))
-  //   },
-  // )
 
   // Display the paper's contents.
   body
